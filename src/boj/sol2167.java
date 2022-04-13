@@ -1,5 +1,6 @@
 package boj;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class sol2167 {
@@ -8,8 +9,8 @@ public class sol2167 {
         int N = sc.nextInt();
         int M = sc.nextInt();
         int[][] arr = new int[N + 1][M + 1];
-        for (int i = 1; i < N; i++) {
-            for (int j = 1; j < M; j++) {
+        for (int i = 1; i <=N; i++) {
+            for (int j = 1; j <= M; j++) {
                 arr[i][j] = sc.nextInt();
             }
         }
@@ -20,9 +21,9 @@ public class sol2167 {
             int x = sc.nextInt();
             int y = sc.nextInt();
             int answer = 0;
-            for (int l = i; l < x; l++) {
+            for (int l = i; l <= x; l++) {
                 for (int m = j; m <= y; m++) {
-                    answer += arr[i][j];
+                    answer += arr[l][m];
                 }
             }
             System.out.println(answer);
